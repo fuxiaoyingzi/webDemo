@@ -1,0 +1,17 @@
+* {
+  margin: 0px;
+  padding: 10px;
+  color: red;
+}
+/* body {
+  background-color: aquamarine;
+} */
+
+body {
+  background-image: url("../images/111.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #ffffff;
+}
