@@ -18,11 +18,11 @@ const routes = [
     path: "/a",
     name: "a",
     component: a,
-    beforeEnter: (to, from, next) => {
-      console.log(to);
-      console.log(from);
-      next(true); //允许跳转
-    },
+    // beforeEnter: (to, from, next) => {
+    //   console.log(to);
+    //   console.log(from);
+    //   next(true); //允许跳转
+    // },
   },
   { path: "/b", name: "b", component: b },
   {

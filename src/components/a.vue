@@ -19,6 +19,7 @@ export default {
   },
   methods: {
     openB() {
+      console.log("跳转B");
       this.$router.push({ name: "b" });
     },
   },
