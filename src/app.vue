@@ -1,20 +1,14 @@
 <template>
   <div>
-    <h1>TodoList</h1>
-
-    <input
-      type="text"
-      placeholder="请输入内容"
-      v-model="content"
-      maxlength="10"
-    />
-    <el-button @click="addItem">添加</el-button>
-
-    <ul>
-      <li v-for="(item, index) in dataList">{{ item }}</li>
-    </ul>
+    <button @click="goGo">前进</button>
+    <button @click="goBack">后退</button>
+    <button @click="goHome">首页</button>
+    <transition name="slide-fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
+
 <script>
 import img from "../assets/images/111.png";
 import "../assets/styles/main.css";
@@ -39,6 +33,18 @@ export default {
       this.dataList.push(this.content);
       this.content = "";
     },
+    goGo() {
+      console.log("前进");
+      this.$router.go(1);
+    },
+    goBack() {
+      console.log("后退");
+      this.$router.go(-1);
+    },
+    goHome() {
+      console.log("首页");
+      this.$router.push("/a");
+    },
   },
 };
 </script>
@@ -60,5 +66,24 @@ input {
 
 li:nth-of-type(odd) {
   color: #00ccff;
+}
+
+.slide-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.slide-fade-enter-active {
+  transition: all 1.2s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.1s cubic-bezier(2, 0.5, 0.8, 1);
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+  left: 0;
+  right: 0;
+  transform: translateX(50px);
+  opacity: 0;
 }
 </style>
