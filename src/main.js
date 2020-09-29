@@ -3,6 +3,7 @@ import Vue from "vue";
 //导入 APP组件
 import App from "./app.vue";
 import vuerouter from "./router/router.js";
+import store from "./store/store.js";
 
 import ElementUI from "element-ui";
 //import "element-ui/lib/theme-chalk/index.css";
@@ -14,6 +15,7 @@ Vue.use(ElementUI);
 new Vue({
   el: "#app",
   router: vuerouter,
+  store: store,
   render: (h) => h(App),
 });
 
