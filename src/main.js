@@ -8,6 +8,8 @@ import store from "./store/store.js";
 import ElementUI from "element-ui";
 //import "element-ui/lib/theme-chalk/index.css";
 
+import "./api/mock/mock"
+
 Vue.use(ElementUI);
 
 //挂载APP组件

@@ -7,6 +7,7 @@
     "axios": "^0.20.0",
     "element-ui": "^2.13.2",
     "es6-promise": "^4.2.8",
+    "mockjs": "^1.1.0",
     "stylus": "^0.54.8",
     "vue": "^2.6.12",
     "vue-loader": "^15.9.3",
